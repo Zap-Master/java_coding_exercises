@@ -16,21 +16,20 @@ public class Exercise001 {
 
     public double addVat(double originalPrice, double vatRate) {
         double result = originalPrice + originalPrice*vatRate/100;
-        String strValue = String.format("%.2f", result);
-        return  Double.parseDouble(strValue);
+        String totalValue = String.format("%.2f", result);
+        return  Double.parseDouble(totalValue);
     }
 
     public String reverse(String sentence) {
-        StringBuilder str1 = new StringBuilder();
-        str1.append(sentence);
-        str1 = str1.reverse();
-        return str1.toString();
+        StringBuilder reversedStr = new StringBuilder();
+        reversedStr.append(sentence);
+        reversedStr = reversedStr.reverse();
+        return reversedStr.toString();
     }
 
     public int countLinuxUsers(List<User> users) {
         int counterLinuxUsers = 0;
         for (User user : users) {
-            //System.out.println(user.getUsername());
             if (user.getType() == "Linux") {
                 counterLinuxUsers ++;
             }
