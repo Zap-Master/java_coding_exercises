@@ -30,7 +30,7 @@ public class Exercise001 {
     public int countLinuxUsers(List<User> users) {
         int counterLinuxUsers = 0;
         for (User user : users) {
-            if (user.getType() == "Linux") {
+            if (user.getType().equalsIgnoreCase("linux")) {
                 counterLinuxUsers ++;
             }
         }               
